@@ -21,7 +21,7 @@ const createGatsbyNode = (createNode, createNodeId) => stop => {
   })
 }
 
-exports.sourceNodes = async ({ actions, createNodeId }, configOptions) => {
+exports.sourceNodes = async ({ actions, createNodeId }) => {
   const { createNode } = actions
 
   const query = `{

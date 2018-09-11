@@ -1,15 +1,36 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1>Stops</h1>
+    <div>
+      { data.allJoreStop.edges.map(({ node }) => (
+        <div key={node.id}>
+          Jore stop { node.stopId }
+        </div>
+      )) }
+    </div>
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    allJoreStop {
+      edges {
+        node {
+          id
+          stopId
+          lat
+          lon
+          nameFi
+          shortId
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
