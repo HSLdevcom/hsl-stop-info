@@ -3,17 +3,19 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 
-const StopPage = ({ data }) => (
+const StopPage = ({data}) => (
   <Layout>
     <div>
-      { JSON.stringify(data, null, 2) }
+      <pre><code>
+        { JSON.stringify(data, null, 2) }
+      </code></pre>
     </div>
   </Layout>
 )
 
 export const query = graphql`
-  query joreStop($id: joreStopIdQueryString_2 ) {
-    joreStop(id: $id) {
+  query joreStop {
+    joreStop {
       id
       stopId
       lat

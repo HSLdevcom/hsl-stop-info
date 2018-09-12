@@ -1,4 +1,3 @@
-const { createStopPath} = require('./src/helpers/createStopPath')
 const path = require('path')
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -10,6 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allJoreStop(limit: 100) {
         edges {
           node {
+            path
             id
             stopId
             shortId
@@ -25,10 +25,10 @@ exports.createPages = async ({ graphql, actions }) => {
   
   // Create pages for each markdown file.
   stops.data.allJoreStop.edges.forEach(({ node }) => {
-    const path = createStopPath(node)
+    
     
     createPage({
-      path,
+      path: node.path,
       component: stopPageComponent,
       context: {
         id: node.id,

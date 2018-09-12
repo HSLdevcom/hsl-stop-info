@@ -1,9 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
-
 import Layout from '../components/layout'
-import { createStopPath } from '../helpers/createStopPath'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -11,7 +9,7 @@ const IndexPage = ({ data }) => (
     <div>
       {data.allJoreStop.edges.map(({ node }) => (
         <div key={node.id}>
-          Jore stop <Link to={createStopPath(node)}>{ node.shortId }</Link>
+          Jore stop <Link to={node.path}>{ node.shortId }</Link>
         </div>
       ))}
     </div>
@@ -23,6 +21,7 @@ export const query = graphql`
     allJoreStop(limit: 100) {
       edges {
         node {
+          path
           id
           stopId
           lat
