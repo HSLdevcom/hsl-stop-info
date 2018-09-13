@@ -23,10 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
     throw new Error(JSON.stringify(stops.errors))
   }
   
-  // Create pages for each markdown file.
   stops.data.allJoreStop.edges.forEach(({ node }) => {
-    
-    
     createPage({
       path: node.path,
       component: stopPageComponent,
