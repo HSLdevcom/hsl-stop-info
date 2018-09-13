@@ -4,8 +4,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => (
-  <Layout>
-    <h1>Stops</h1>
+  <Layout title="Stops">
     <div>
       {data.allJoreStop.edges.map(({ node }) => (
         <div key={node.id}>
@@ -18,7 +17,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    allJoreStop(limit: 100) {
+    allJoreStop {
       edges {
         node {
           path

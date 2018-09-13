@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const stopPageComponent = path.resolve(`src/pages/stop.js`)
   const stops = await graphql(`
     {
-      allJoreStop(limit: 100) {
+      allJoreStop {
         edges {
           node {
             path

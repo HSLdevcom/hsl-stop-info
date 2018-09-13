@@ -4,10 +4,10 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 
 const StopPage = ({data}) => (
-  <Layout>
+  <Layout title={data.joreStop.shortId}>
     <div>
       <pre><code>
-        { JSON.stringify(data, null, 2) }
+        { JSON.stringify(data.joreStop, null, 2) }
       </code></pre>
     </div>
   </Layout>
@@ -21,7 +21,21 @@ export const query = graphql`
       lat
       lon
       nameFi
+      nameSe
+      addressFi
+      addressSe
       shortId
+      modes {
+        nodes
+      }
+      departuresGrouped {
+        nodes {
+          routeId
+          dayType
+          hours
+          minutes
+        }
+      }
     }
   }
 `
