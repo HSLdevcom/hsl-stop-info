@@ -39,7 +39,7 @@ exports.sourceNodes = async ({ actions, createNodeId }) => {
   }
 
   const query = `{
-    allStops(first: 100, condition: { posterCount: 1 }) {
+    allStops(condition: { posterCount: 1 }) {
       nodes {
         nodeId
         stopId

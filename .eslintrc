@@ -5,5 +5,10 @@
     "react/prop-types": "off",
     "no-console": "off"
   },
+  "settings": {
+    "react": {
+      "version": "16.4"
+    }
+  },
   "extends": ["eslint:recommended", "plugin:react/recommended", "react-app"]
 }

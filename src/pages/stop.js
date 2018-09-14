@@ -37,8 +37,8 @@ const StopPage = ({ data }) => (
 )
 
 export const query = graphql`
-  query joreStop {
-    joreStop {
+  query joreStop($id: String) {
+    joreStop(id: { eq: $id }) {
       id
       stopId
       lat

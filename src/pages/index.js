@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    allJoreStop {
+    allJoreStop(limit: 100) {
       edges {
         node {
           path
