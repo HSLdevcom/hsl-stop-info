@@ -4,16 +4,17 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'hsl-stop-info',
+        short_name: 'stopinfo',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#007ac9',
+        theme_color: '#007ac9',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/hsl-logo.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
@@ -28,6 +29,6 @@ module.exports = {
         }
       }
     },
-    "gatsby-source-stops"
+    "gatsby-source-stops",
   ],
 }

@@ -55,19 +55,6 @@ exports.sourceNodes = async ({ actions, createNodeId }) => {
         modes {
           nodes
         }
-        departuresGrouped: departuresGropuped {
-          nodes {
-            stopId
-            routeId
-            direction
-            dayType
-            hours
-            minutes
-            dateBegin
-            dateEnd
-            note
-          }
-        }
       }
     }
   }`

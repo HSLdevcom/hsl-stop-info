@@ -28,14 +28,6 @@ export const query = graphql`
       modes {
         nodes
       }
-      departuresGrouped {
-        nodes {
-          routeId
-          dayType
-          hours
-          minutes
-        }
-      }
     }
   }
 `
