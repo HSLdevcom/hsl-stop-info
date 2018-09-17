@@ -23,7 +23,7 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
         json: true,
       })
     } catch (err) {
-      console.log(err.response.body)
+      console.log(err)
     }
 
     const featureCollection = mapillaryImages.body
