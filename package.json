@@ -4,12 +4,10 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "add": "^2.0.6",
     "dotenv": "^6.0.0",
     "gatsby": "next",
-    "gatsby-plugin-manifest": "next",
-    "gatsby-plugin-offline": "next",
-    "gatsby-plugin-react-helmet": "next",
-    "gatsby-plugin-styled-components": "^2.0.11",
+    "got": "^9.2.1",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
@@ -29,6 +27,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
+    "babel-plugin-styled-components": "^1.7.1",
     "eslint": "^4.1.1",
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "^2.34.1",
@@ -36,6 +35,11 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.11.1",
     "gatsby-plugin-eslint": "^2.0.1",
+    "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-prefetch-google-fonts": "^1.0.11",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-styled-components": "next",
     "prettier": "^1.14.2"
   },
   "repository": {

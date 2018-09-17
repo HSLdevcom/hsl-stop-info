@@ -1,17 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
+import Header from '../components/Header'
+import PageContent from '../components/PageContent'
 
 const IndexPage = ({ data }) => (
-  <Layout title="Stops">
-    <div>
+  <Layout>
+    <Header siteTitle="Stops" />
+    <PageContent>
       {data.allJoreStop.edges.map(({ node }) => (
         <div key={node.id}>
           Jore stop <Link to={node.path}>{ node.shortId }</Link>
         </div>
       ))}
-    </div>
+    </PageContent>
   </Layout>
 )
 
