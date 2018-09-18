@@ -61,9 +61,9 @@ const StopPage = ({ data }) => (
       </ModeIcons>
     </Header>
     <PageContent>
-      {/*<pre style={{ color: '#fff', background: 'hsla(0, 0%, 0%, 0.25)' }}>
+      <pre style={{ color: '#fff', background: 'hsla(0, 0%, 0%, 0.25)' }}>
         <code>{JSON.stringify(data.joreStop, null, 2)}</code>
-      </pre>*/}
+      </pre>
     </PageContent>
   </Layout>
 )
