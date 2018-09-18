@@ -11,6 +11,12 @@ Install dependencies with Yarn (or npm, but there's only a `yarn.lock` for now):
 yarn
 ```
 
+Also install the dependencies of the local `gatsby-source-stops` plugin, which is responsible for fetching stops from JORE:
+```bash
+cd plugins/gatsby-source-stops
+yarn
+```
+
 ## Develop
 
 Run the `develop` command to work on the site:
